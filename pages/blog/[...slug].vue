@@ -50,6 +50,10 @@ useContentHead(data.value!)
 
   p {
     @apply mb-2;
+
+    a {
+      @apply text-zinc-500 underline;
+    }
   }
 
   blockquote {

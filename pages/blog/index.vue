@@ -11,7 +11,7 @@ const documents = computed(() => data?.value || [])
 </script>
 
 <template>
-    <div class="flex flex-col max-w-[50rem] w-full mx-auto mt-10">
+    <div class="flex flex-col max-w-[50rem] w-full mx-auto mt-10 gap-y-5">
         <nuxt-link
             v-for="d in documents" :key="d._path"
             class="border p-4 border-zinc-100 rounded shadow block w-full"
