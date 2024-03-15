@@ -16,7 +16,7 @@ const { data } = await useAsyncData(route.fullPath, async () => {
 
     const [enDoc] = await queryContent('/blog/' + slug.value.join('/'))
       .where({
-        _locale: 'en-US',
+        _locale: locale.value,
       })
       .find()
 
@@ -27,7 +27,7 @@ useContentHead(data.value!)
 
 </script>
 <template>
-  <main v-if="data" class="blog-doc">
+  <main v-if="data" class="blog-doc container mx-auto">
     <ContentRenderer :value="data" />
   </main>
 </template>
